@@ -55,8 +55,8 @@ Create a Flow Panel in your dashboard. The initial setup loads the first example
     - siteConfig: https://raw.githubusercontent.com/andymchugh/andrewbmchugh-flow-panel-docs/main/examples/siteConfig.yaml
 - Test Data Generation:
   - Deselect generation and see the SVG change to unannotated. Reselect and see the color and values come back.
-- Troubleshooting: *Note these steps all need you to open your browser console.*
-  - Data: Press the button and expand the two log lines of *Troubleshooting Data raw* and *Troubleshooting Data enriched*. The raw view is the timeseries grafana has sent to the panel. The enriched view is the data after test-data has been included. In the enriched view every used time-series has a corresponding *time* series and the *time* series also shows the valuesIndex that has been chosen based on the time-slider position.
+- Debugging: *Note these steps all need you to open your browser console.*
+  - Data: Press the button and expand the two log lines of *Debugging Data raw* and *Debugging Data enriched*. The raw view is the timeseries grafana has sent to the panel. The enriched view is the data after test-data has been included. In the enriched view every used time-series has a corresponding *time* series and the *time* series also shows the valuesIndex that has been chosen based on the time-slider position.
   -  Mappings: Press the button and you'll get log lines for abstract and verbose. The *abstract* line shows how SVG cell IDs have been assigned to time-series. The *verbose* line gives all of the SVG mapping information.
   -  Units: Press the button and expand out the log line showing the Category -> Subcategory -> {text, value} for every potential unit. The unit strings you enter in the yaml config are the *values* shown here.
   -  Colors: Press the button and see the available grafana theme hues. Each hue has mutiple shades. These color names can be used directly in the yaml. Alternatively you can enter short hex, long hex, rgb or hsl. All of these formats will be recognised and so will also work with *gradient* selected. If you want to enter html color names instead, they will be passed through to the SVG but they won't be understood by the panel and so *gradient* will have no effect.
@@ -89,7 +89,7 @@ Once your familiar with the controls creating your first proper panel boils down
 - See your SVG responding in the correct units to the test data.
 - Develop your time-series query in its own time-series panel until you are happy with the result.
 - Copy your query into the Flow panel remembering to alias the time-series to a meaningful name.
-- Press 'Troubleshooting Data' to see your query time-series coming through to the panel.
+- Press 'Debugging Data' to see your query time-series coming through to the panel.
 - Change your panel config dataRef to map the cell ID to your time-series name.
 - Use the time-slider to see your value being correctly echoed in SVG.
 - Rinse / Repeat. 
