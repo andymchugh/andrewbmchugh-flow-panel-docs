@@ -53,6 +53,9 @@ Create a Flow Panel in your dashboard. The initial setup loads the first example
     - svg: https://raw.githubusercontent.com/andymchugh/andrewbmchugh-flow-panel-docs/main/examples/svg2.svg
     - panelConfig: https://raw.githubusercontent.com/andymchugh/andrewbmchugh-flow-panel-docs/main/examples/panelConfig2.yaml
     - siteConfig: https://raw.githubusercontent.com/andymchugh/andrewbmchugh-flow-panel-docs/main/examples/siteConfig.yaml
+- Links:
+  - Move the mouse over a cell. See the cursor change to a pointer. Click and dive off to the associated link.
+  - Move the mouse over the 'Active Workers' cell. note the mouse doesn't change as there is no associated link.
 - Test Data Generation:
   - Deselect generation and see the SVG change to unannotated. Reselect and see the color and values come back.
 - Debugging: *Note these steps all need you to open your browser console.*
