@@ -68,4 +68,3 @@ cells:
       thresholds:
         - {color: "#888888", level: 0}
         - {color: "light-blue", level: 100}
-    link: *grafana-home
