@@ -51,13 +51,18 @@ cells:
   # Each field name is the svg ID. i.e. within config this cell will be identifed as
   # 'inbox_depth'. Within the actual svg it will be called 'cell-inbox_depth'.
   inbox_depth:
-    # The dateRef defines the name of the name of the time-series
+    # The dateRef defines the name of the time-series. This is the default time-series that will
+    # be applied to all configured attributes on this cell. It can be overriden on an attribute
+    # by attribute basis.
     dataRef: "test-data-large-sin"
 
     # The label field defines how the text in the cell will be adjusted based on the
     # time-series value. The time series value is postpended with a seperator. If no
     # adjustment is wanted the field should be omitted.
     label:
+      # Optional attribute level override for the associated time-series.
+      dataRef: "test-data-large-cos"
+  
       # Valid values are cr, space, colon, replace
       separator: "cr"
 
@@ -72,6 +77,8 @@ cells:
     # The label color field defines how the text in the cell should be colored based on the
     # time-series value. If no adjustment is wanted the field should be omitted.
     labelColor:
+      # Optional attribute level override for the associated time-series.
+      dataRef: "test-data-large-cos"
 
       # This defines the coloring gradientMode. When set to "hue", color values will be interpolated between
       # the threshold levels. When set to "none" the colors are absolute and change when a threshold is
@@ -106,6 +113,9 @@ cells:
     # time-series value. If no adjustment is wanted the field should be omitted.
     fillColor:
       # See labelColor
+      dataRef: "test-data-large-cos"
+
+      # See labelColor
       gradientMode: "hue"
 
       # See labelColor
@@ -119,7 +129,6 @@ cells:
 
     # The link defines the url to open if the cell is left clicked.
     link:
-
       # URL to open. It can contain parameters and those parameters can contain grafana variables.
       url: "https://drawio-app.com"
 
