@@ -1,0 +1,1 @@
+<svg><img src="" onerror='alert("example of sanitization need due to xss")'></svg>
